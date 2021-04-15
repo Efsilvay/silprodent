@@ -1,0 +1,121 @@
+<section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>Editar Clinicas</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="">Inicio</a></li>
+            <li class="breadcrumb-item active">Editar Clinica</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+  </section>
+  
+  <!-- Main content -->
+  <section class="content">
+    <!-- Default box -->
+    <div class="container-fluid">
+      
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Formulario de edición de Clínica</h3>
+          </div>
+          <div class="card-body">
+            <div class="box box-warning">
+    
+              <!-- /.box-header -->
+              <div class="box-body">
+                <form #form1="ngForm" novalidate>
+                  <!-- text input -->
+    
+                  <div class="form-group">
+                    <label>Rut</label>
+                    <input type="text" (keyup)="validaFormulario(form1, 'rut')" class="form-control" placeholder="Ingresar Rut" name="rut" #rut="ngModel"
+                      [(ngModel)]="clinica.rut">
+                  </div>
+    
+                  <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text" (keyup)="validaFormulario(form1, 'nombre')" class="form-control" placeholder="Ingresar Nombre" name="nombre" #nombre="ngModel"
+                      [(ngModel)]="clinica.nombre">
+                  </div>
+    
+                  <div class="form-group">
+                    <label>Razón Social</label>
+                    <input type="text" (keyup)="validaFormulario(form1, 'razonSocial')" class="form-control" placeholder="Ingresar Apellido" name="razonSocial"
+                      #razonSocial="ngModel" [(ngModel)]="clinica.razonSocial">
+                  </div>
+    
+                  <div class="form-group">
+                    <label>Giro</label>
+                    <input type="text" (keyup)="validaFormulario(form1, 'giro')" class="form-control" placeholder="Ingresar Nombre de Usuario" name="giro"
+                      #giro="ngModel" [(ngModel)]="clinica.giro">
+                  </div>
+    
+                  <div class="form-group">
+                    <label>Representante Legal</label>
+                    <input type="text" (keyup)="validaFormulario(form1, 'representanteLegal')" class="form-control" placeholder="Ingresar Telefono" name="representanteLegal"
+                      #representanteLegal="ngModel" [(ngModel)]="clinica.representanteLegal">
+                  </div>
+    
+                  <div class="form-group">
+                    <label>Dirección</label>
+                    <input type="text" (keyup)="validaFormulario(form1, 'direccion')" class="form-control" placeholder="Ingresar Telefono" name="direccion"
+                      #direccion="ngModel" [(ngModel)]="clinica.direccion">
+                  </div>
+    
+                  <div class="form-group">
+                    <label>Comuna</label>
+                    <input type="text" (keyup)="validaFormulario(form1, 'comuna')" class="form-control" placeholder="Ingresar Telefono" name="comuna"
+                      #comuna="ngModel" [(ngModel)]="clinica.comuna">
+                  </div>
+                  
+                  <div class="form-group">
+                    <label>Ciudad</label>
+                    <input type="text" (keyup)="validaFormulario(form1, 'ciudad')" class="form-control" placeholder="Ingresar Telefono" name="ciudad"
+                      #ciudad="ngModel" [(ngModel)]="clinica.ciudad">
+                  </div>
+    
+                  <div class="form-group">
+                    <label>Telefono</label>
+                    <input type="tel" (keyup)="validaFormulario(form1, 'telefono')" class="form-control" placeholder="Ingresar Telefono" name="telefono"
+                      #telefono="ngModel" [(ngModel)]="clinica.telefono">
+                  </div>
+    
+                  <div class="form-group">
+                    <label>Celular</label>
+                    <input type="tel" (keyup)="validaFormulario(form1, 'celular')" class="form-control" placeholder="Ingresar Telefono" name="celular"
+                      #celular="ngModel" [(ngModel)]="clinica.celular">
+                  </div>
+    
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" (keyup)="validaFormulario(form1, 'email')" class="form-control" placeholder="Ingresar Email Ej: o@o.cl" name="email"
+                      #email="ngModel" [(ngModel)]="clinica.email">
+                  </div>
+                  <div class="form-group">
+                    <button type="button" [routerLink]="['/clientes/clinicas']" class="btn btn-danger">
+                      Cancelar
+                    </button>
+                    <button type="button" (click)="guardar(form1)" class="{{ this.classBoton }} float-right">
+                      Guardar
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <!-- /.box-body -->
+            </div>
+          </div>
+          <!-- /.card-body -->
+          <!-- /.card-footer-->
+        </div>
+      
+      
+    </div>
+    <!-- /.card -->
+  </section>
+  

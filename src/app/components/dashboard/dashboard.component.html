@@ -1,0 +1,234 @@
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1 class="m-0 text-dark">Resumen</h1>
+      </div>
+      <!-- /.col -->
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+          <li class="breadcrumb-item active">Resumen</li>
+        </ol>
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+
+<!-- Main content -->
+<section class="content">
+  <div class="container-fluid">
+    <!-- Small boxes (Stat box) -->
+    <div class="card">
+      <div class="card-title">Ordenes</div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-lg-12 col-12">
+            <div class="small-box bg-dark">
+              <div class="inner">
+                <h3>{{cantTotal}}</h3>
+    
+                <p>Total Ingresadas</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-log-in"></i>
+              </div>
+              <a [routerLink]="['/ordenes']" class="small-box-footer"
+                >Detalle <i class="fas fa-arrow-circle-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-2 col-6">
+            <!-- small box -->
+            <div class="small-box bg-light">
+              <div class="inner">
+                <h3>{{cantInformadas}}</h3>
+    
+                <p>Ordenes informadas</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-log-in"></i>
+              </div>
+              <a [routerLink]="['/ordenes']" class="small-box-footer"
+                >Detalle <i class="fas fa-arrow-circle-right"></i
+              ></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-2 col-6">
+            <!-- small box -->
+            <div class="small-box bg-warning">
+              <div class="inner">
+                <h3>{{cantRecepcionadas}}</h3>
+    
+                <p>Ordenes Recepcionadas</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-archive"></i>
+              </div>
+              <a [routerLink]="['/ordenes']" class="small-box-footer"
+                >Detalle <i class="fas fa-arrow-circle-right"></i
+              ></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-2 col-6">
+            <!-- small box -->
+            <div class="small-box bg-danger">
+              <div class="inner">
+                <h3>{{cantEnProceso}}</h3>
+    
+                <p>Ordenes En Proceso</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-android-settings"></i>
+              </div>
+              <a [routerLink]="['/ordenes']" class="small-box-footer"
+                >Detalle <i class="fas fa-arrow-circle-right"></i
+              ></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-2 col-6">
+            <!-- small box -->
+            <div class="small-box bg-secondary">
+              <div class="inner">
+                <h3>{{cantEnRevision}}</h3>
+    
+                <p>Ordenes En Revisión</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-android-list"></i>
+              </div>
+              <a [routerLink]="['/ordenes']" class="small-box-footer"
+                >Detalle <i class="fas fa-arrow-circle-right"></i
+              ></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-2 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3>{{cantTerminadas}}</h3>
+    
+                <p>Ordenes Terminadas</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-android-done"></i>
+              </div>
+              <a [routerLink]="['/ordenes']" class="small-box-footer"
+                >Detalle <i class="fas fa-arrow-circle-right"></i
+              ></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-2 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3>{{cantDespachadas}}</h3>
+    
+                <p>Ordenes Despachadas</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-android-done-all"></i>
+              </div>
+              <a [routerLink]="['/ordenes']" class="small-box-footer"
+                >Detalle <i class="fas fa-arrow-circle-right"></i
+              ></a>
+            </div>
+          </div>
+          <!-- ./col -->
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Entidades</div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-primary">
+              <div class="inner">
+                <h3>{{cantClinicas}}</h3>
+    
+                <p>Clinicas</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-log-in"></i>
+              </div>
+              <a [routerLink]="['/clientes/clinicas']" class="small-box-footer"
+                >Detalle <i class="fas fa-arrow-circle-right"></i
+              ></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3>{{cantDentistas}}</h3>
+    
+                <p>Dentistas</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-archive"></i>
+              </div>
+              <a [routerLink]="['/clientes/dentistas']" class="small-box-footer"
+                >Detalle <i class="fas fa-arrow-circle-right"></i
+              ></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3>{{cantPacientes}}</h3>
+    
+                <p>Pacientes</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-android-settings"></i>
+              </div>
+              <a [routerLink]="['/clientes/pacientes']" class="small-box-footer"
+                >Detalle <i class="fas fa-arrow-circle-right"></i
+              ></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-secondary">
+              <div class="inner">
+                <h3>{{cantLaboratoristas}}</h3>
+    
+                <p>Laboratoristas</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-android-list"></i>
+              </div>
+              <a [routerLink]="['/laboratoristas/todos']" class="small-box-footer"
+                >Detalle <i class="fas fa-arrow-circle-right"></i
+              ></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+    
+    <!-- /.row -->
+  </div>
+  <!-- Main row -->
+</section>
+<!-- /.content -->

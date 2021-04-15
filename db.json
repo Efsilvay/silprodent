@@ -1,0 +1,592 @@
+{
+  "clinicas": [
+    {
+      "id": 1,
+      "rut": "772175167",
+      "nombre": "Clinica Dentimas",
+      "razonSocial": "Clinica Dentimas  Chile SPA",
+      "giro": "Centro Dental",
+      "representanteLegal": "Esteban Sanhueza",
+      "direccion": "Ohiggins ",
+      "comuna": "Concepcion",
+      "ciudad": "Concepcion",
+      "telefono": "412776978",
+      "celular": "-",
+      "email": "esanhueza.7@gmail.com"
+    },
+    {
+      "id": 2,
+      "rut": "771484069",
+      "nombre": "Clinica Cuspides",
+      "razonSocial": "Clinica Odontologica Gonzalez",
+      "giro": "Centro Odontologico",
+      "representanteLegal": "Patricio Gonzalez",
+      "direccion": "Colocolo 222 of. 401",
+      "comuna": "Concepcion",
+      "ciudad": "Concepcion",
+      "telefono": "961775205",
+      "celular": "974721143",
+      "email": "cuspidesclinicaodontologica@gmail.com"
+    },
+    {
+      "id": 3,
+      "rut": "969392704",
+      "nombre": "Clinica Dental Cumbres",
+      "razonSocial": "Clinica Dental Cumbres",
+      "giro": "Centro Odontologico",
+      "representanteLegal": "Jean  Beltran",
+      "direccion": "Pedro de valdivia 611",
+      "comuna": "Concepcion",
+      "ciudad": "Concepcion",
+      "telefono": "413168800",
+      "celular": "",
+      "email": "cumbres@cumbres.cl"
+    },
+    {
+      "id": 4,
+      "rut": "762647249",
+      "nombre": "Clinica Dental Atacama",
+      "razonSocial": "Atacama  Dental Ltda",
+      "giro": "Centro Dental",
+      "representanteLegal": "Miguel Mardones",
+      "direccion": "Av Barros Arana 741 of 26",
+      "comuna": "Concepcion",
+      "ciudad": "Concepcion",
+      "telefono": "412224404",
+      "celular": "979219152",
+      "email": "atacamadentalconcepcion@gmail.com"
+    },
+    {
+      "id": 5,
+      "rut": "761930052",
+      "nombre": "Clinica Equilibrio",
+      "razonSocial": "Equilibrio Dental LTDA",
+      "giro": "Centro Medico",
+      "representanteLegal": "Juan Francisco Cuevas",
+      "direccion": "San Martin 1415 ",
+      "comuna": "Concepcion",
+      "ciudad": "Concepcion",
+      "telefono": "413162010",
+      "celular": "982270764",
+      "email": "codontoequilibrio@gmail.com"
+    }
+  ],
+  "dentistas": [
+    {
+      "id": 1,
+      "rut": "48263578K",
+      "nombre": "Octavia",
+      "apellido": "Pereira",
+      "clinica": 1,
+      "direccion": "Ohiggins 225",
+      "comuna": "Concepcion",
+      "ciudad": "Concepcion",
+      "telefono": "78965123",
+      "celular": "569645842",
+      "email": "ClinicaDentimas@gmail.com"
+    },
+    {
+      "id": 2,
+      "rut": "543694723",
+      "nombre": "Jose",
+      "apellido": "Peralta",
+      "clinica": 2,
+      "direccion": "Navarro 5697",
+      "comuna": "Concepcion",
+      "ciudad": "Concepcion",
+      "telefono": "412259860",
+      "celular": "94668241",
+      "email": "jperalta@gmail.com"
+    },
+    {
+      "id": 3,
+      "rut": "543694723",
+      "nombre": "jaime ",
+      "apellido": "Carreño",
+      "clinica": 3,
+      "direccion": "Lautaro 222",
+      "comuna": "Concepcion",
+      "ciudad": "Concepcion",
+      "telefono": "569745314",
+      "celular": "99324021",
+      "email": "jcarreño@gmail.com"
+    },
+    {
+      "id": 4,
+      "rut": "15603882",
+      "nombre": "Giovanni ",
+      "apellido": "Ulloa",
+      "clinica": "4",
+      "direccion": "San Martin 355",
+      "comuna": "Concepcion",
+      "ciudad": "Concepcion",
+      "telefono": "995706633",
+      "celular": "946552297",
+      "email": "gulloa@gmail.com@gmail.com"
+    },
+    {
+      "id": 5,
+      "rut": "118470141",
+      "nombre": "Luis",
+      "apellido": "Silva",
+      "clinica": "1",
+      "direccion": "Angol 896",
+      "comuna": "Concepcion",
+      "ciudad": "Concepcion",
+      "telefono": "412252680",
+      "celular": "965878978",
+      "email": "msilva@gmail.com"
+    },
+    {
+      "id": 6,
+      "rut": "145507522",
+      "nombre": "Cristina ",
+      "apellido": "Sepulveda",
+      "clinica": "4",
+      "direccion": "lincoyan 1252",
+      "comuna": "concepcion",
+      "ciudad": "Concepcion",
+      "telefono": "96622115",
+      "celular": "1235558",
+      "email": "comex2003@gmail.com"
+    },
+    {
+      "id": 7,
+      "rut": "722244456",
+      "nombre": "Patricio ",
+      "apellido": "Gonzalez",
+      "clinica": "2",
+      "direccion": "Angol 222 of 401",
+      "comuna": "Concepcion",
+      "ciudad": "Concepcion",
+      "telefono": "41662225",
+      "celular": "9446685213",
+      "email": "pgonzalez@gmail.com"
+    }
+  ],
+  "pacientes": [
+    {
+      "id": 1,
+      "nombre": "Jose",
+      "apellido": "Cardenas",
+      "clinica": 1,
+      "dentista": 1,
+      "sexo": "M",
+      "edad": 34,
+      "color": "45",
+      "telefono": "78965123",
+      "celular": "9824446612"
+    },
+    {
+      "id": 2,
+      "nombre": "Javiera ",
+      "apellido": "Montenegro",
+      "clinica": 2,
+      "dentista": 2,
+      "sexo": "M",
+      "edad": 25,
+      "color": "46",
+      "telefono": "78965123",
+      "celular": "569645842"
+    },
+    {
+      "id": 3,
+      "nombre": "Angela ",
+      "apellido": "Lopez",
+      "clinica": "2",
+      "dentista": "2",
+      "sexo": "F",
+      "edad": 65,
+      "color": "59",
+      "telefono": "964966678",
+      "celular": "64374335"
+    },
+    {
+      "id": 4,
+      "nombre": "Aracely",
+      "apellido": "Bastias",
+      "clinica": "3",
+      "dentista": "4",
+      "sexo": "F",
+      "edad": 33,
+      "color": "96",
+      "telefono": "964966678",
+      "celular": "96587889"
+    }
+  ],
+  "ordenes": [
+    {
+      "id": 1,
+      "clinica": 1,
+      "dentista": 1,
+      "paciente": 2,
+      "color": 46,
+      "tipoTrabajo": 1,
+      "etapa": 1,
+      "pieza": "Inferior",
+      "observacion": "Cubeta De Fotocurado",
+      "valor": 5000,
+      "estado": 2,
+      "fechaIngreso": "17-08-2020",
+      "fechaTermino": "17-08-2020",
+      "fechaDespacho": "17-08-2020",
+      "laboratorista": 3
+    },
+    {
+      "id": 3,
+      "clinica": 2,
+      "dentista": 2,
+      "paciente": 3,
+      "color": 46,
+      "tipoTrabajo": 1,
+      "etapa": 1,
+      "pieza": "Superior",
+      "observacion": "Aliviar Zonas Retentivas",
+      "valor": 5000,
+      "estado": 4,
+      "fechaIngreso": "17-08-2020",
+      "fechaTermino": "17-08-2020",
+      "fechaDespacho": "17-08-2020",
+      "laboratorista": 2
+    },
+    {
+      "id": 4,
+      "clinica": "4",
+      "dentista": "4",
+      "paciente": "4",
+      "color": "3m3 o 45",
+      "tipoTrabajo": "2",
+      "etapa": "3",
+      "pieza": "Superior e Inferior",
+      "observacion": "Color marche",
+      "valor": "55000",
+      "estado": "6",
+      "fechaIngreso": "2021-03-17",
+      "fechaTermino": "2021-03-24",
+      "fechaDespacho": "2021-03-25",
+      "laboratorista": 4
+    },
+    {
+      "id": 5,
+      "clinica": "5",
+      "dentista": "4",
+      "paciente": "3",
+      "color": "41",
+      "tipoTrabajo": "1",
+      "etapa": "4",
+      "pieza": "Superior",
+      "observacion": "tallado de Encias",
+      "valor": "50000",
+      "estado": "5",
+      "fechaIngreso": "2021-03-18",
+      "fechaTermino": "2021-03-19",
+      "fechaDespacho": "2021-03-20",
+      "laboratorista": "3"
+    },
+    {
+      "id": 6,
+      "clinica": "2",
+      "dentista": "1",
+      "paciente": "2",
+      "color": "58",
+      "tipoTrabajo": "1",
+      "etapa": "2",
+      "pieza": "Superior e Inferior",
+      "observacion": "Protesis Totales",
+      "valor": "300000",
+      "estado": "3",
+      "fechaIngreso": "20-03-2021",
+      "fechaTermino": "21-03-2021",
+      "fechaDespacho": "22-03-2021",
+      "laboratorista": "1"
+    },
+    {
+      "id": 7,
+      "clinica": "1",
+      "dentista": "2",
+      "paciente": "2",
+      "color": "43",
+      "tipoTrabajo": "1",
+      "etapa": "1",
+      "pieza": "Inferior",
+      "observacion": "Seguir curva de Wilson",
+      "valor": "20000",
+      "estado": "1",
+      "fechaIngreso": "17-03-2021",
+      "fechaTermino": "18-03-2021",
+      "fechaDespacho": "25-03-2021",
+      "laboratorista": "4"
+    },
+    {
+      "id": 8,
+      "clinica": "5",
+      "dentista": "5",
+      "paciente": "4",
+      "color": "43",
+      "tipoTrabajo": "1",
+      "etapa": "3",
+      "pieza": "Superior",
+      "observacion": "Pzas tamaño 8 Anteriores",
+      "valor": "30000",
+      "estado": "3",
+      "fechaIngreso": "19-03-2021",
+      "fechaTermino": "19-03-2021",
+      "fechaDespacho": "26-03-2021",
+      "laboratorista": "2"
+    },
+    {
+      "id": 9,
+      "clinica": "5",
+      "dentista": "5",
+      "paciente": "4",
+      "color": "42",
+      "tipoTrabajo": "1",
+      "etapa": "3",
+      "pieza": "Inferior",
+      "observacion": "Alinear  Al arco",
+      "valor": "30000",
+      "estado": "3",
+      "fechaIngreso": "19-03-2021",
+      "fechaTermino": "19-03-2021",
+      "fechaDespacho": "26-03-2021",
+      "laboratorista": "2"
+    },
+    {
+      "id": 10,
+      "clinica": "2",
+      "dentista": "2",
+      "paciente": "1",
+      "color": "46",
+      "tipoTrabajo": "2",
+      "etapa": "4",
+      "pieza": "Pza 1.1",
+      "observacion": "Carilla",
+      "valor": "32000",
+      "estado": "4",
+      "fechaIngreso": "17-03-2021",
+      "fechaTermino": "18-03-2021",
+      "fechaDespacho": "26-03-2021",
+      "laboratorista": "1"
+    },
+    {
+      "id": 11,
+      "clinica": "2",
+      "dentista": "2",
+      "paciente": "1",
+      "color": "47",
+      "tipoTrabajo": "2",
+      "etapa": "4",
+      "pieza": "Pza 3.1",
+      "observacion": "Incrustacion",
+      "valor": "32000",
+      "estado": "4",
+      "fechaIngreso": "17-03-2021",
+      "fechaTermino": "18-03-2021",
+      "fechaDespacho": "26-03-2021",
+      "laboratorista": "1"
+    },
+    {
+      "id": 12,
+      "clinica": "4",
+      "dentista": "1",
+      "paciente": "3",
+      "color": "46",
+      "tipoTrabajo": "2",
+      "etapa": "1",
+      "pieza": "superior",
+      "observacion": "aliviar zonas retentivas",
+      "valor": "5000",
+      "estado": "1",
+      "fechaIngreso": "2021-03-18",
+      "fechaTermino": "2021-03-22",
+      "fechaDespacho": "2021-03-19",
+      "laboratorista": "3"
+    },
+    {
+      "id": 13,
+      "clinica": "4",
+      "dentista": "3",
+      "paciente": "2",
+      "color": "46",
+      "tipoTrabajo": "1",
+      "etapa": "3",
+      "pieza": "Superior",
+      "observacion": "Esperar extracciones",
+      "valor": "5000",
+      "estado": "1",
+      "fechaIngreso": "2021-03-18",
+      "fechaTermino": null,
+      "fechaDespacho": null,
+      "laboratorista": "1"
+    },
+    {
+      "id": 14,
+      "clinica": "2",
+      "dentista": "1",
+      "paciente": "1",
+      "color": "45",
+      "tipoTrabajo": "1",
+      "etapa": "1",
+      "pieza": "Inferior",
+      "observacion": "Acrilico Translucido",
+      "valor": "5000",
+      "estado": "1",
+      "fechaIngreso": "2021-03-18",
+      "fechaTermino": null,
+      "fechaDespacho": null,
+      "laboratorista": "1"
+    },
+    {
+      "id": 15,
+      "clinica": "4",
+      "dentista": "5",
+      "paciente": "1",
+      "color": "45",
+      "tipoTrabajo": "1",
+      "etapa": "1",
+      "pieza": "Superior",
+      "observacion": "Dientes Pequeños",
+      "valor": "10000",
+      "estado": "1",
+      "fechaIngreso": "2021-03-18",
+      "fechaTermino": null,
+      "fechaDespacho": null,
+      "laboratorista": "1"
+    },
+    {
+      "id": 16,
+      "clinica": "2",
+      "dentista": "7",
+      "paciente": "2",
+      "color": "46",
+      "tipoTrabajo": "2",
+      "etapa": "3",
+      "pieza": "superior",
+      "observacion": "Dientes tamaño 8",
+      "valor": "55000",
+      "estado": "1",
+      "fechaIngreso": "2021-03-18",
+      "fechaTermino": null,
+      "fechaDespacho": null,
+      "laboratorista": "4"
+    }
+  ],
+  "laboratoristas": [
+    {
+      "id": 1,
+      "rut": "118470141",
+      "nombre": "luis",
+      "apellido": "Silva",
+      "telefono": "995315763",
+      "email": "Silprodent@gmail.com"
+    },
+    {
+      "id": 2,
+      "rut": "145768675",
+      "nombre": "karen",
+      "apellido": "Lopez",
+      "telefono": "982330791",
+      "email": "kalohe80@gmail.com"
+    },
+    {
+      "id": 3,
+      "rut": "7232552k",
+      "nombre": "Juan ",
+      "apellido": "Silva",
+      "telefono": "950594842",
+      "email": "jsilvap@gmail.com"
+    },
+    {
+      "id": 4,
+      "rut": "105507221",
+      "nombre": "Walter",
+      "apellido": "Fritz",
+      "telefono": "964966678992906297",
+      "email": "Walterfritz@gmail.com"
+    },
+    {
+      "rut": "15412456K",
+      "nombre": "Cecilia",
+      "apellido": "Silva",
+      "telefono": "979332336",
+      "email": "mcsilvay@gmail.com",
+      "id": 5
+    }
+  ],
+  "tipoTrabajo": [
+    {
+      "id": 1,
+      "trabajo": "Protesis Acrilica"
+    },
+    {
+      "id": 2,
+      "trabajo": "Protesis Metalica"
+    }
+  ],
+  "etapas": [
+    {
+      "id": 1,
+      "etapa": "Cubeta Funcional"
+    },
+    {
+      "id": 2,
+      "etapa": "Laca con rodete"
+    },
+    {
+      "id": 3,
+      "etapa": "Ordenacion"
+    },
+    {
+      "id": 4,
+      "etapa": "Acrilizacion"
+    }
+  ],
+  "estados": [
+    {
+      "id": 1,
+      "estado": "Informada"
+    },
+    {
+      "id": 2,
+      "estado": "Recepcionada"
+    },
+    {
+      "id": 3,
+      "estado": "En Proceso"
+    },
+    {
+      "id": 4,
+      "estado": "En Revision"
+    },
+    {
+      "id": 5,
+      "estado": "Terminada"
+    },
+    {
+      "id": 6,
+      "estado": "Despachada"
+    }
+  ],
+  "mensajes": [
+    {
+      "id": 1,
+      "mensaje": "Orden Ingresada 17-03-2021"
+    },
+    {
+      "id": 2,
+      "mensaje": "Orden Ingresada :18-03-2021"
+    },
+    {
+      "id": 3,
+      "mensaje": "Orden Ingresada :18-03-2021"
+    },
+    {
+      "id": 4,
+      "mensaje": "Orden # 15 creada : 18-03-2021"
+    },
+    {
+      "id": 5,
+      "mensaje": "Orden #16 creada : 18-03-2021"
+    }
+  ]
+}

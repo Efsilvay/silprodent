@@ -1,0 +1,109 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>Ordenes en Proceso</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="">Inicio</a></li>
+            <li class="breadcrumb-item active">En Proceso</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+  </section>
+  
+  <!-- Main content -->
+  <section class="content">
+    <!-- Default box -->
+    <div class="container-fluid">
+      <div class="card">
+        <div class="card-body">
+          <div class="col-xs-12">
+            <div class="box">
+              <!-- /.box-header -->
+              <div class="box-body">
+                <a class="btn btn-primary" style="margin-bottom: 10px;" routerLink="/ordenes/ingresar">Ingresar Orden +</a>
+                <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap" *ngIf="hayDatos">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <table id="example2" class="table table-bordered table-hover dataTable" role="grid"
+                        aria-describedby="example2_info">
+                        <thead>
+                          <tr role="row">
+                            <th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">
+                              Orden</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-label="Browser: activate to sort column ascending">Clinica</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-label="Platform(s): activate to sort column ascending">Dentista</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-label="Engine version: activate to sort column ascending">Paciente</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-label="CSS grade: activate to sort column ascending">Etapa</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-label="CSS grade: activate to sort column ascending">TipoTrabajo</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-label="CSS grade: activate to sort column ascending">Arcada o Pieza</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-label="CSS grade: activate to sort column ascending">Color</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-label="CSS grade: activate to sort column ascending">Valor</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-label="CSS grade: activate to sort column ascending">Estado</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-label="CSS grade: activate to sort column ascending">Fecha Ingreso</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-label="CSS grade: activate to sort column ascending">Fecha Termino</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-label="CSS grade: activate to sort column ascending">Fecha Despacho</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="2"
+                              aria-label="CSS grade: activate to sort column ascending">Acción</th>
+  
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr role="row" class="odd" *ngFor="let d of datosOrdenes">
+                            <td class="sorting_1">{{d.id}}</td>
+                            <td>{{d.clinica}}</td>
+                            <td>{{d.dentista}}</td>
+                            <td>{{d.paciente}}</td>
+                            <td>{{d.tipoTrabajo}}</td>
+                            <td>{{d.etapa}}</td>
+                            <td>{{d.pieza}}</td>
+                            <td>{{d.color}}</td>
+                            <td>{{d.valor}}</td>
+                            <td>{{d.estado}}</td>
+                            <td>{{d.fechaIngreso}}</td>
+                            <td>{{d.fechaTermino}}</td>
+                            <td>{{d.fechaDespacho}}</td>
+                            <td><button class="btn btn-warning">Editar</button></td>
+                            <td><button class="btn btn-danger">Eliminar</button> </td>
+                          </tr>
+                        </tbody>
+                        <tfoot>
+                        </tfoot>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center" *ngIf="!hayDatos">No existen datos</div>
+              </div>
+              <!-- /.box-body -->
+            </div>
+          </div>
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer">
+          Total: {{cantidadOrdenes}} ordenes
+        </div>
+        <!-- /.card-footer-->
+      </div>
+    </div>
+    <!-- /.card -->
+  </section>
+  <!-- /.content -->

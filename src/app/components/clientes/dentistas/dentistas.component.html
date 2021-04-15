@@ -1,0 +1,111 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1>Dentistas</h1>
+      </div>
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a href="">Inicio</a></li>
+          <li class="breadcrumb-item active">Dentistas</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <!-- /.container-fluid -->
+</section>
+
+<!-- Main content -->
+<section class="content">
+  <!-- Default box -->
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-body">
+        <div class="col-xs-12">
+          <div class="box">
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div class="row justify-content-md-center">
+                <a class="btn btn-primary" style="margin-bottom: 10px;" routerLink="/clientes/agregar-dentistas">Agregar
+                  Nuevo +</a>
+              </div>
+
+              <div class="row justify-content-md-center">
+                <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <table id="example2" class="table table-bordered table-hover dataTable" role="grid"
+                        aria-describedby="example2_info">
+                        <thead>
+                          <tr role="row">
+                            <th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">
+                              Id</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-label="Browser: activate to sort column ascending">Rut</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-label="Platform(s): activate to sort column ascending">Nombre</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-label="Engine version: activate to sort column ascending">Apellido</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-label="CSS grade: activate to sort column ascending">Clinica</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-label="CSS grade: activate to sort column ascending">Dirección</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-label="CSS grade: activate to sort column ascending">Comuna</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-label="CSS grade: activate to sort column ascending">Ciudad</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-label="CSS grade: activate to sort column ascending">Teléfono</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-label="CSS grade: activate to sort column ascending">Celular</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-label="CSS grade: activate to sort column ascending">Email</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="2"
+                              aria-label="CSS grade: activate to sort column ascending">Acción</th>
+
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr role="row" class="odd" *ngFor="let d of datosDentistas">
+                            <td class="sorting_1">{{d.id}}</td>
+                            <td>{{d.rut}}</td>
+                            <td>{{d.nombre}}</td>
+                            <td>{{d.apellido}}</td>
+                            <td>{{d.clinica}}</td>
+                            <td>{{d.direccion}}</td>
+                            <td>{{d.comuna}}</td>
+                            <td>{{d.ciudad}}</td>
+                            <td>{{d.telefono}}</td>
+                            <td>{{d.celular}}</td>
+                            <td>{{d.email}}</td>
+                            <td><button class="btn btn-warning" [routerLink]="['/clientes/editar-dentista/', d.id]">Editar</button></td>
+                            <td><button class="btn btn-danger" (click)="eliminarDentista(d.id)">Eliminar</button> </td>
+                          </tr>
+                        </tbody>
+                        <tfoot>
+                        </tfoot>
+                      </table>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+            <!-- /.box-body -->
+          </div>
+        </div>
+      </div>
+      <!-- /.card-body -->
+      <div class="card-footer">
+        Total: {{cantidadDentistas}} Dentistas
+      </div>
+      <!-- /.card-footer-->
+    </div>
+
+  </div>
+  <!-- /.card -->
+</section>
+<!-- /.content -->

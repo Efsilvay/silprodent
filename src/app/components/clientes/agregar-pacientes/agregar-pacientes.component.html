@@ -1,0 +1,118 @@
+<section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>Agregar Paciente</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="">Inicio</a></li>
+            <li class="breadcrumb-item active">Agregar Paciente</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+  </section>
+  
+  <!-- Main content -->
+  <section class="content">
+    <!-- Default box -->
+    <div class="container-fluid">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Formulario de Ingreso de Pacientes</h3>
+        </div>
+        <div class="card-body">
+          <div class="box box-warning">
+  
+            <!-- /.box-header -->
+            <div class="box-body" *ngIf="existeDentista">
+              <form #form1="ngForm" novalidate>
+                <!-- text input -->
+  
+                <div class="form-group">
+                  <label>Nombre</label>
+                  <input (keyup)="validaFormulario(form1, 'nombre')" type="text" class="form-control" placeholder="Ingresar Nombre" name="nombre" #nombre="ngModel"
+                    [(ngModel)]="paciente.nombre">
+                </div>
+  
+                <div class="form-group">
+                  <label>Apellido</label>
+                  <input (keyup)="validaFormulario(form1, 'apellido')" type="text" class="form-control" placeholder="Ingresar Apellido" name="apellido"
+                    #apellido="ngModel" [(ngModel)]="paciente.apellido">
+                </div>
+
+                <div class="form-group">
+                    <label>Clinica</label>
+                    <select  class="form-control" (change)="validaFormulario($event.target.value, 'clinica')" name="clinica">
+                      <option value="" disabled selected>Seleccionar una opción</option>
+                      <option *ngFor="let d of datosClinicas"
+                      [value]="d.id">{{d.nombre}}</option>
+                    </select>
+                  </div>
+  
+                <div class="form-group" *ngIf="seleccion">
+                  <label>Dentista</label>
+                  <select  class="form-control" (change)="validaFormulario($event.target.value, 'dentista')" name="dentista">
+                    <option value="" disabled selected>Seleccionar una opción</option>
+                    <option *ngFor="let d of datosDentistasTmp"
+                    [value]="d.id">{{d.nombre}} {{d.apellido}}</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Sexo</label>
+                    <select class="form-control" (change)="validaFormulario($event.target.value, 'sexo')" name="sexo">
+                      <option value="" disabled selected>Seleccionar una opción</option>
+                      <option *ngFor="let s of sexo"
+                      [value]="s.letra">{{s.nombre}}</option>
+                    </select>
+                </div>
+  
+                <div class="form-group">
+                  <label>Edad</label>
+                  <input (keyup)="validaFormulario(form1, 'edad')" type="number" class="form-control" placeholder="Ingresar edad" name="edad"
+                    #edad="ngModel" [(ngModel)]="paciente.edad">
+                </div>
+  
+                <div class="form-group">
+                  <label>Color</label>
+                  <input (keyup)="validaFormulario(form1, 'color')" type="text" class="form-control" placeholder="Ingresar Color" name="color"
+                    #color="ngModel" [(ngModel)]="paciente.color">
+                </div>
+  
+                <div class="form-group">
+                  <label>Telefono</label>
+                  <input (keyup)="validaFormulario(form1, 'telefono')" type="tel" class="form-control" placeholder="Ingresar Telefono" name="telefono"
+                    #telefono="ngModel" [(ngModel)]="paciente.telefono">
+                </div>
+  
+                <div class="form-group">
+                  <label>Celular</label>
+                  <input (keyup)="validaFormulario(form1, 'celular')" type="tel" class="form-control" placeholder="Ingresar Telefono Celular" name="celular"
+                    #celular="ngModel" [(ngModel)]="paciente.celular">
+                </div>
+  
+                <div class="form-group">
+                  <button type="button" [routerLink]="['/clientes/pacientes']" class="btn btn-danger">
+                    Cancelar
+                  </button>
+                  <button type="button" (click)="agregar(form1)" class="{{ this.classBoton }} float-right">
+                    Guardar
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!-- /.box-body -->
+            <div class="text-center" *ngIf="!existeDentista">Debe Estar ingresado al menos 1 dentista</div>
+          </div>
+        </div>
+        <!-- /.card-body -->
+        <!-- /.card-footer-->
+      </div>
+    </div>
+    <!-- /.card -->
+  </section>
+  
+

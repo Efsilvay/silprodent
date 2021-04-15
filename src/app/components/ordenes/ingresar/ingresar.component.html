@@ -1,0 +1,149 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1>Ingresar Orden</h1>
+      </div>
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a href="">Inicio</a></li>
+          <li class="breadcrumb-item active">Ingresar Orden</li> 
+        </ol>
+      </div>
+    </div>
+  </div>
+  <!-- /.container-fluid -->
+</section>
+
+<!-- Main content -->
+<section class="content">
+  <!-- Default box -->
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Formulario de Ingreso de Ordenes de Trabajo</h3>
+      </div>
+      <div class="card-body">
+        <div class="box box-warning">
+          <!-- /.box-header -->
+          <div class="box-body">
+            <form #form1="ngForm" novalidate>
+              <!-- text input -->
+              <div class="form-group">
+                <label>Clinica</label>
+                <select class="form-control" (change)="validaFormulario($event.target.value, 'clinica')" name="clinica">
+                  <option value="" disabled selected>Seleccionar una opción</option>
+                  <option *ngFor="let d of datosClinicas" [value]="d.id">{{d.nombre}}</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Dentista</label>
+                <select class="form-control" (change)="validaFormulario($event.target.value, 'dentista')" name="dentista">
+                  <option value="" disabled selected>Seleccionar una opción</option>
+                  <option *ngFor="let d of datosDentistas" [value]="d.id">{{d.nombre}} {{d.apellido}}</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Paciente</label>
+                <select class="form-control" (change)="validaFormulario($event.target.value, 'paciente')" name="paciente">
+                  <option value="" disabled selected>Seleccionar una opción</option>
+                  <option *ngFor="let d of datosPacientes" [value]="d.id">{{d.nombre}} {{d.apellido}}</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Tipo Trabajo</label>
+                <select class="form-control" (change)="validaFormulario($event.target.value, 'tipoTrabajo')" name="tipoTrabajo">
+                  <option value="" disabled selected>Seleccionar una opción</option>
+                  <option *ngFor="let d of datosTrabajos" [value]="d.id">{{d.trabajo}}</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Etapa</label>
+                <select class="form-control" (change)="validaFormulario($event.target.value, 'etapa')" name="etapa">
+                  <option value="" disabled selected>Seleccionar una opción</option>
+                  <option *ngFor="let d of datosEtapas" [value]="d.id">{{d.etapa}}</option>
+                </select>
+              </div>
+              <label>Arcada o Pieza</label>
+              <div class="form-group">
+                <input type="text" (keyup)="validaFormulario(form1, 'pieza')" class="form-control"
+                placeholder="Ingresar Arcada o Pieza" name="pieza" #pieza="ngModel"
+                [(ngModel)]="ordenes.pieza">
+              </div>
+              <label>Color</label>
+              <div class="form-group">
+                <input type="text" (keyup)="validaFormulario(form1, 'color')" class="form-control"
+                placeholder="Ingresar Color" name="color" #color="ngModel"
+                [(ngModel)]="ordenes.color">
+              </div>
+              <label>Observacion</label>
+              <div class="form-group">
+                <input type="text" (keyup)="validaFormulario(form1, 'observacion')" class="form-control"
+                placeholder="Ingresar Detalle u Observación" name="observacion" #observacion="ngModel"
+                [(ngModel)]="ordenes.observacion">
+              </div>
+              <label>Valor</label>
+              <div class="form-group">
+                <input type="text" (keyup)="validaFormulario(form1, 'valor')" class="form-control"
+                placeholder="Ingresar Precio" name="valor" #valor="ngModel"
+                [(ngModel)]="ordenes.valor">
+              </div>
+              <div class="form-group">
+                <label>Estado</label>
+                <select class="form-control" (change)="validaFormulario($event.target.value, 'estado')" name="estado">
+                  <option value="" disabled selected>Seleccionar una opción</option>
+                  <option *ngFor="let d of datosEstados" [value]="d.id">{{d.estado}}</option>
+                </select>
+              </div>
+              <label>Fecha Ingreso</label>
+              <div class='input-group date' id='datetimepicker1'>
+                <input type='date' class="form-control" (change)="validaFormulario($event.target.value, 'fechaIngreso')" name="fechaIngreso" #fechaIngreso="ngModel"
+                [(ngModel)]="ordenes.fechaIngreso"/>
+                <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+              </div>
+              <label>Fecha Termino</label>
+              <div class='input-group date' id='datetimepicker1'>
+                <input type='date' class="form-control" (change)="validaFormulario($event.target.value, 'fechaTermino')" name="fechaTermino" #fechaTermino="ngModel"
+                [(ngModel)]="ordenes.fechaTermino"/>
+                <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+              </div>
+              <label>Fecha Despacho</label>
+              <div class='input-group date' id='datetimepicker1'>
+                <input type='date' class="form-control" (change)="validaFormulario($event.target.value, 'fechaDespacho')" name="fechaDespacho" #fechaDespacho="ngModel"
+                [(ngModel)]="ordenes.fechaDespacho"/>
+                <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+              </div>
+              <div class="form-group">
+                <label>Asignar</label>
+                <select class="form-control" (change)="validaFormulario($event.target.value, 'laboratorista')" name="laboratorista">
+                  <option value="" disabled selected>Seleccionar una opción</option>
+                  <option *ngFor="let d of datosLaboratoristas" [value]="d.id">{{d.nombre}} {{d.apellido}}</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <button type="button" [routerLink]="['/ordenes/todas']" class="btn btn-danger">
+                  Cancelar
+                </button>
+                <button type="button" (click)="agregar(form1)" class="{{ this.classBoton }} float-right">
+                  Guardar
+                </button>
+              </div>
+            </form>
+          </div>
+          <!-- /.box-body -->
+        </div>
+      </div>
+      <!-- /.card-body -->
+      <!-- /.card-footer-->
+    </div>
+  </div>
+  <!-- /.card -->
+</section>
+<!-- /.content -->

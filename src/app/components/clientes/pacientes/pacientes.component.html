@@ -1,0 +1,104 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1>Pacientes</h1>
+      </div>
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a href="">Inicio</a></li>
+          <li class="breadcrumb-item active">Pacientes</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <!-- /.container-fluid -->
+</section>
+
+<!-- Main content -->
+<section class="content">
+  <!-- Default box -->
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-body">
+        <div class="col-xs-12">
+          <div class="box">
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div class="row justify-content-md-center">
+                <a class="btn btn-primary text-center" style="margin-bottom: 10px;"
+                  routerLink="/clientes/agregar-pacientes">Agregar Nuevo +</a>
+              </div>
+
+              <div class="row justify-content-md-center">
+                <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <table id="example2" class="table table-bordered table-hover dataTable" role="grid"
+                        aria-describedby="example2_info">
+                        <thead>
+                          <tr role="row">
+                            <th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">
+                              Id</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-label="Platform(s): activate to sort column ascending">Nombre</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-label="Engine version: activate to sort column ascending">Apellido</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-label="CSS grade: activate to sort column ascending">Dentista</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-label="CSS grade: activate to sort column ascending">Sexo</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-label="CSS grade: activate to sort column ascending">Edad</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-label="CSS grade: activate to sort column ascending">Color</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-label="CSS grade: activate to sort column ascending">Teléfono</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                              aria-label="CSS grade: activate to sort column ascending">Celular</th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="2"
+                              aria-label="CSS grade: activate to sort column ascending">Acción</th>
+
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr role="row" class="odd" *ngFor="let d of datosPacientes">
+                            <td class="sorting_1">{{d.id}}</td>
+                            <td>{{d.nombre}}</td>
+                            <td>{{d.apellido}}</td>
+                            <td>{{d.dentista}}</td>
+                            <td>{{d.sexo}}</td>
+                            <td>{{d.edad}}</td>
+                            <td>{{d.color}}</td>
+                            <td>{{d.telefono}}</td>
+                            <td>{{d.celular}}</td>
+                            <td><button class="btn btn-warning" [routerLink]="['/clientes/editar-paciente/', d.id]">Editar</button></td>
+                            <td><button class="btn btn-danger" (click)="eliminarPaciente(d.id)">Eliminar</button> </td>
+                          </tr>
+                        </tbody>
+                        <tfoot>
+                        </tfoot>
+                      </table>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+        </div>
+      </div>
+      <!-- /.card-body -->
+      <div class="card-footer">
+        Total: {{cantidadPacientes}} Pacientes
+      </div>
+      <!-- /.card-footer-->
+    </div>
+
+  </div>
+  <!-- /.card -->
+</section>
+<!-- /.content -->
